@@ -1,4 +1,5 @@
-import { DocsLayout, Layout} from "@/layouts";
+import { DocsLayout, Layout } from "@/layouts";
+import Home from "@/pages/Home";
 import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -9,7 +10,7 @@ function App() {
       <Routes>
         {/* Home */}
         <Route element={<Layout />}>
-          <Route path="/" />
+          <Route path="/" element={<Home />} />
         </Route>
         {/* Docs */}
         <Route path="/docs/*" element={<DocsLayout />}></Route>
@@ -19,6 +20,10 @@ function App() {
         </Route>
         {/* Pricing */}
         <Route path="/pricing/" element={<Layout />}>
+          <Route path="" />
+        </Route>
+        {/* About */}
+        <Route path="/about/" element={<Layout />}>
           <Route path="" />
         </Route>
       </Routes>
