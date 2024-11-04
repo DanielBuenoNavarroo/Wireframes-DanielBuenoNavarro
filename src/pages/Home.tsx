@@ -9,7 +9,7 @@ const Home = () => {
             <Hero />
             */}
             <div className={`max-w-screen-xl w-full aspect-video m-auto`}>
-                <Carousel images={IMAGES}/>
+                <Carousel images={IMAGES} />
             </div>
         </div>
     );

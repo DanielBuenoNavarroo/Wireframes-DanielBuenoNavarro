@@ -23,16 +23,11 @@ const Carousel = ({images, autoPlay = true, interval = 5000}: CarouselProps) => 
     }
 
     useEffect(() => {
-        if (!autoPlay) return;
+        if (!autoPlay || isHovered) return;
 
-        const handleInterval = setInterval(() => {
-            if (!isHovered) {
-                showNextImage();
-            }
-        }, interval);
-
-        return () => clearInterval(handleInterval);
-    }, [isHovered, showNextImage, autoPlay, interval]);
+        const timeoutId = setTimeout(showNextImage, interval);
+        return () => clearTimeout(timeoutId);
+    }, [isHovered, showNextImage, autoPlay, interval, imageIndex]);
 
     const CustomButton = (fn: () => void, Icon: React.ElementType, display: string) => (
         <button
