@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div className="w-screen max-h-screen h-screen flex flex-col bg-black">
+    <div className="w-screen max-h-screen h-screen flex flex-col">
       <DefaultHeader />
       <Outlet></Outlet>
     </div>
