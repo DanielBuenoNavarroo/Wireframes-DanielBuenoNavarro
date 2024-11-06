@@ -1,4 +1,4 @@
-import {DocsLayout, Layout} from "@/layouts";
+import {Layout} from "@/layouts";
 import {Suspense} from "react";
 import {Route, Routes} from "react-router-dom";
 import {Auth, Home} from "@/pages";
@@ -12,7 +12,7 @@ function App() {
                     <Route path="/" element={<Home/>}/>
                 </Route>
                 {/* Docs */}
-                <Route path="/docs/*" element={<DocsLayout/>}>
+                <Route path="/docs/*" element={<Layout />}>
                     
                 </Route>
                 {/* Contact */}
