@@ -12,7 +12,8 @@ export default defineConfig({
             plugins: ['line-numbers'],
             theme: '',
             css: true,
-        })
+        }),
+        
     ],
     resolve: {
         alias: {

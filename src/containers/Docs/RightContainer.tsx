@@ -2,7 +2,7 @@ import {Outlet} from "react-router-dom";
 
 const RightContainer = () => {
     return (
-        <div>
+        <div className={'w-full p-8'}>
             <Outlet/>
         </div>
     );

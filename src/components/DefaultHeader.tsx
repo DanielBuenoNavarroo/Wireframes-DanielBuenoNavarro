@@ -2,8 +2,8 @@ import {Link, NavLink} from "react-router-dom";
 
 const DefaultHeader = () => {
     const routes = [
+        {name: "Docs", path: "/docs"},
         {name: "Pricing", path: "/pricing"},
-        {name: "Documentation", path: "/docs"},
         {name: "Contact", path: "/contact"},
         {name: "About", path: "/about"},
     ];

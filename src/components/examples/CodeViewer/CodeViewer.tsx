@@ -1,41 +1,40 @@
 import {useEffect, useState} from "react";
+import {toast} from "react-toastify";
 import Prism from "prismjs";
-import "prism-themes/themes/prism-xonokai.css"
+import "prism-themes/themes/prism-atom-dark.css"
 
 type CodeViewerProps = {
     code: string,
     language?: string
 }
 
-const CodeViewer = ({code, language = "javascript"}: CodeViewerProps) => {
+const CodeViewer = ({code, language = "js"}: CodeViewerProps) => {
     const [isHovered, setIsHovered] = useState<boolean>(false);
 
     useEffect(() => {
         Prism.highlightAll();
     }, [code]);
 
-    // Función para copiar el código al portapapeles
     const handleCopy = async () => {
         try {
             await navigator.clipboard.writeText(code);
+            toast.success("Component copied to clipboard!");
         } catch (err) {
             console.error("Error al copiar: ", err);
+            toast.error(`Error: ${err}`);
         }
     };
 
     return (
-        <div className="relative bg-neutral-900" onMouseEnter={() => setIsHovered(true)}
+        <div className="relative w-full" onMouseEnter={() => setIsHovered(true)}
              onMouseLeave={() => setIsHovered(false)}>
-            {/* Botón para copiar */}
             <button
                 onClick={handleCopy}
-                className={`absolute z-10 top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600 focus:outline-none ${!isHovered && 'hidden'}`}
+                className={`absolute z-10 top-4 right-4 px-4 py-2 bg-zinc-700 text-white rounded text-sm hover:bg-zinc-600 focus:outline-none ${!isHovered && 'hidden'}`}
             >
                 Copiar
             </button>
-
-            {/* Visor de código */}
-            <pre className="p-4 rounded-lg overflow-auto border-zinc-900" style={{border: "none"}}>
+            <pre style={{border: "none", maxHeight: "20rem", padding: "1rem 2rem"}}>
                 <code className={`language-${language} text-sm`}>{code.trim()}</code>
             </pre>
         </div>
