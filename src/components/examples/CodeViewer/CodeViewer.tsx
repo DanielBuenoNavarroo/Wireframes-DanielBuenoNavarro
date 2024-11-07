@@ -8,7 +8,7 @@ type CodeViewerProps = {
     language?: string
 }
 
-const CodeViewer = ({code, language = "js"}: CodeViewerProps) => {
+const CodeViewer = ({code, language = "javascript"}: CodeViewerProps) => {
     const [isHovered, setIsHovered] = useState<boolean>(false);
 
     useEffect(() => {
@@ -34,7 +34,7 @@ const CodeViewer = ({code, language = "js"}: CodeViewerProps) => {
             >
                 Copiar
             </button>
-            <pre style={{border: "none", maxHeight: "20rem", padding: "1rem 2rem"}}>
+            <pre style={{border: "none", maxHeight: "30rem", padding: "1rem 2rem"}}>
                 <code className={`language-${language} text-sm`}>{code.trim()}</code>
             </pre>
         </div>

@@ -3,16 +3,21 @@
 @tailwind utilities;
 
 html {
-    @apply flex justify-center text-white bg-neutral-950
+  @apply flex justify-center text-white bg-neutral-950;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0c3145 transparent;
 }
 
 *::-webkit-scrollbar {
-    width: 16px;
+  width: 16px;
 }
 
 *::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    border: 5px solid transparent;
-    background-clip: content-box;
-    background-color: #0C3145;
+  border-radius: 8px;
+  border: 5px solid transparent;
+  background-clip: content-box;
+  background-color: #0c3145;
 }

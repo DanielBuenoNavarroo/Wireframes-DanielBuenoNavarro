@@ -18,6 +18,7 @@ const Carousel = ({images, autoPlay = true, interval = 5000}: CarouselProps) => 
     const showPrevImage = useCallback(() => {
         setImageIndex(index => (index === 0 ? images.length - 1 : index - 1));
     }, [images.length]);
+    
     const showImageIndex = (index: number) => {
         setImageIndex(index)
     }
