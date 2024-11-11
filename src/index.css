@@ -1,23 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-  @apply flex justify-center text-white bg-neutral-950;
+body {
+    @apply flex justify-center text-white bg-neutral-950;
 }
 
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #0c3145 transparent;
+@supports (-moz-appearance: none) {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #ea580c transparent;
+    }
 }
 
 *::-webkit-scrollbar {
-  width: 16px;
+    width: 16px;
 }
 
 *::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  border: 5px solid transparent;
-  background-clip: content-box;
-  background-color: #0c3145;
+    border-radius: 8px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+    background-color: #ea580c;
+}
+
+.sour-gummy-custom {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
 }

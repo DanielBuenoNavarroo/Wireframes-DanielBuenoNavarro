@@ -1,31 +1,38 @@
-import { CarouselPage, CodeViewerPage, Introduction } from "@/pages/Docs";
+import {CarouselPage, CodeViewerPage, Introduction} from "@/pages/Docs";
 
 export const DocsItems = [
-  {
-    title: "Getting Started",
-    links: [
-      {
-        url: "",
-        label: "Introduction",
-        component: Introduction,
-      },
-    ],
-  },
-  {
-    title: "Components",
-    links: [
-      {
-        url: "carousel",
-        label: "Carousel",
-        component: CarouselPage,
-      },
-      {
-        url: "code-viewer",
-        label: "CodeViewer",
-        component: CodeViewerPage,
-      },
-    ],
-  },
+    {
+        title: "Getting Started",
+        links: [
+            {
+                url: "",
+                label: "Introduction",
+                component: Introduction,
+            },
+        ],
+    },
+    {
+        title: "Components",
+        links: [
+            {
+                url: "carousel",
+                label: "Carousel",
+                component: CarouselPage,
+            },
+            {
+                url: "code-viewer",
+                label: "CodeViewer",
+                component: CodeViewerPage,
+            },
+        ],
+    },
+];
+
+export const routes = [
+    {name: "Docs", path: "/docs"},
+    {name: "Pricing", path: "/pricing"},
+    {name: "Contact", path: "/contact"},
+    {name: "About", path: "/about"},
 ];
 
 export const carrouselTSX = `
@@ -100,3 +107,20 @@ const Carousel = ({ images, autoPlay = true, interval = 5000 }: CarouselProps) =
 
 export default Carousel;
 `;
+
+export const exampleCode = `
+function helloUser(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+};
+
+const element = (
+  <h1>
+    Hello, {helloUser(user)}!
+  </h1>
+);
+`

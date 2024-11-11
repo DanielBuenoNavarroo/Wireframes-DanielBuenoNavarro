@@ -1,10 +1,12 @@
 import { cn } from "@/lib/utils";
-import { Box, BoxProps } from "./Box";
+import Box, { BoxProps } from "./Box";
 
 type StackProps = BoxProps;
 
-export const Stack = ({ className, ...props }: StackProps) => {
+const Stack = ({ className, ...props }: StackProps) => {
     return (
         <Box className={cn("flex flex-col items-start", className)} {...props} />
     );
 };
+
+export default Stack

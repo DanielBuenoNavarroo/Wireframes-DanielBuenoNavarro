@@ -7,6 +7,13 @@ export default {
     ],
     theme: {
         extend: {
+            backgroundImage: {
+                'RoadMap-custom-gradient': 'linear-gradient(180deg, rgba(133, 82, 37, 0), #f93 15%, #ff7c33 50%, #c63e3e 68%, #007aff 85%, rgba(11, 37, 65, 0))',
+            },
+            boxShadow: {
+                'RoadMapTitle': '0 11px 4px 0 rgba(0, 0, 0, 0.45)',
+                'RoadMapContent': '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+            },
             keyframes: {
                 squish: {
                     '50%': {scale: '1.4 0.6'}
