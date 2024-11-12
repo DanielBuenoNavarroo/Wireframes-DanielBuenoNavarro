@@ -1,6 +1,5 @@
 import { Examples, FAQ, Hero } from "@/components/home";
 import { SeparateBar } from "@/components/examples";
-import RoadMap2 from "@/components/examples/RoadMap2/RoadMap2.tsx";
 
 const Home = () => {
   return (
@@ -14,16 +13,6 @@ const Home = () => {
         <SeparateBar />
       </div>
       <FAQ />
-      <div>
-        <RoadMap2
-          data={[
-            {
-              title: "Install dependencies",
-              code: "npm i framer-motion clsx tailwind-merge @tabler/icons-react",
-            },
-          ]}
-        />
-      </div>
     </>
   );
 };

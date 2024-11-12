@@ -38,6 +38,9 @@ const About = () => {
   ];
   return (
     <>
+      <div className={"w-60 sm:w-80 md:w-[25rem] lg:w-[35rem] py-20"}>
+        <SeparateBar />
+      </div>
       <h2 className="text-3xl md:text-5xl font-semibold text-gray-200 text-center">
         Our filosofy
       </h2>
@@ -50,7 +53,9 @@ const About = () => {
       <h2 className="text-3xl md:text-5xl font-semibold text-gray-200 text-center">
         Got a Question?
       </h2>
-      <p className="text-base md:text-xl text-gray-400 mt-4">We'd like to talk more about what you need</p>
+      <p className="text-base md:text-xl text-gray-400 mt-4">
+        We'd like to talk more about what you need
+      </p>
       <div className={"py-8"}>
         <ContactUs />
       </div>

@@ -9,7 +9,7 @@ const ContactItem = ({
   title: string;
   content: string;
 }) => (
-  <div className="flex flex-col items-center gap-2 w-60">
+  <div className="flex flex-col items-center gap-2 w-36 lg:w-60">
     <div className="bg-black p-3 rounded-lg mb-2 hover:shadow-sm hover:shadow-orange-500">
       <Icon className="text-white size-6" />
     </div>
@@ -27,7 +27,7 @@ const ContactUs = () => {
   ];
 
   return (
-    <div className="flex justify-between flex-wrap items-center gap-4 p-8 bg-neutral-950/50 text-white rounded-lg shadow-lg border border-white/5">
+    <div className="flex justify-center md:justify-between flex-wrap items-center gap-10 md:gap-4 p-8 bg-neutral-950/50 text-white rounded-lg shadow-lg border border-white/5">
       {contacts.map((contact, index) => (
         <ContactItem key={index} {...contact} />
       ))}

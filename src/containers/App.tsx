@@ -1,11 +1,39 @@
 import { DocsLayout, Layout } from "@/layouts";
-import { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Suspense, useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { About, Auth, Home } from "@/pages";
-import { ToastContainer } from "react-toastify";
 import { DocsItems } from "@/lib/data";
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    switch (location.pathname) {
+      case "/":
+        document.title = "Home - ReactKit";
+        break;
+      case "/about":
+        document.title = "About - ReactKit";
+        break;
+      case "/contact":
+        document.title = "Contact - ReactKit";
+        break;
+      case "/pricing":
+        document.title = "Pricing - ReactKit";
+        break;
+      case "/auth":
+        document.title = "Auth - ReactKit";
+        break;
+      default:
+        if (location.pathname.startsWith("/docs")) {
+          document.title = "Documentación - ReactKit";
+        } else {
+          document.title = "ReactKit";
+        }
+        break;
+    }
+  }, [location]);
+
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>
@@ -44,7 +72,6 @@ function App() {
           </Route>
         </Routes>
       </Suspense>
-      <ToastContainer />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { Car1, Car2, Car3, Car4, Car5 } from "@/assets";
-import { Carousel, CodeViewer, Table } from "@/components/examples";
+import { Carousel, RoadMap2, Table } from "@/components/examples";
 import { carrouselTSX } from "@/lib/data";
 
 const CarouselPage = () => {
@@ -28,12 +28,23 @@ const CarouselPage = () => {
             <Carousel images={images} autoPlay={true} interval={2500} />
           </div>
         </div>
-        <div className="w-80 sm:w-[25rem] md:w-[30rem] lg:w-[35rem] xl:w-[40rem] 2xl:w-[45rem]">
+        <div className="w-80 sm:w-[25rem] md:w-[30rem] lg:w-[35rem] xl:w-[40rem] 2xl:w-[45rem] text-white">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-50">
             Code
           </h2>
-          <hr className="border border-white/40 mb-8 mt-2" />
-          <CodeViewer code={carrouselTSX} />
+          <hr className="border border-white/40 mt-2 mb-8" />
+          <RoadMap2
+            data={[
+              {
+                title: "install dependences",
+                code: "npm i lucide-react",
+              },
+              {
+                title: "@components/Carousel.tex",
+                code: carrouselTSX,
+              },
+            ]}
+          />
         </div>
         <div className="w-80 sm:w-[25rem] md:w-[30rem] lg:w-[35rem] xl:w-[40rem] 2xl:w-[45rem]">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-50">
