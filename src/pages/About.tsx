@@ -48,8 +48,9 @@ const About = () => {
         <SeparateBar />
       </div>
       <h2 className="text-3xl md:text-5xl font-semibold text-gray-200 text-center">
-        Contact Us
+        Got a Question?
       </h2>
+      <p className="text-base md:text-xl text-gray-400 mt-4">We'd like to talk more about what you need</p>
       <div className={"py-8"}>
         <ContactUs />
       </div>
