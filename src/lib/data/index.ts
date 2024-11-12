@@ -31,7 +31,6 @@ export const DocsItems = [
 export const routes = [
     {name: "Docs", path: "/docs"},
     {name: "Pricing", path: "/pricing"},
-    {name: "Contact", path: "/contact"},
     {name: "About", path: "/about"},
 ];
 

@@ -77,7 +77,7 @@ const ProductPillars = () => {
           </div>
         ))}
       </div>
-      <div className="lg:w-[50rem] min-h-[25rem] shadow-ProductPillars rounded-lg flex flex-col items-center text-center gap-4 px-2 md:px-8 py-8">
+      <div className="lg:w-[50rem] min-h-[25rem] shadow-ProductPillars rounded-3xl flex flex-col items-center text-center gap-4 px-2 md:px-8 py-8">
         <PillarContent
           icon={pillars[contentIndex].icon}
           paragraphs={pillars[contentIndex].paragraphs}

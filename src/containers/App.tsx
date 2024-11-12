@@ -1,7 +1,7 @@
 import { DocsLayout, Layout } from "@/layouts";
 import { Suspense, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import { About, Auth, Home } from "@/pages";
+import { About, Home, Pricing } from "@/pages";
 import { DocsItems } from "@/lib/data";
 
 function App() {
@@ -14,9 +14,6 @@ function App() {
         break;
       case "/about":
         document.title = "About - ReactKit";
-        break;
-      case "/contact":
-        document.title = "Contact - ReactKit";
         break;
       case "/pricing":
         document.title = "Pricing - ReactKit";
@@ -54,22 +51,19 @@ function App() {
               ))
             )}
           </Route>
-          {/* Contact */}
-          <Route path="/contact/" element={<Layout />}>
-            <Route path="" />
-          </Route>
           {/* Pricing */}
           <Route path="/pricing/" element={<Layout />}>
-            <Route path="" />
+            <Route path="" element={<Pricing />} />
           </Route>
           {/* About */}
           <Route path="/about/*" element={<Layout />}>
             <Route path="" element={<About />} />
           </Route>
+          {/* #TODO */}
           {/* Auth */}
-          <Route path="/auth/" element={<Layout />}>
+          {/* <Route path="/auth/" element={<Layout />}>
             <Route path="" element={<Auth />} />
-          </Route>
+          </Route> */}
         </Routes>
       </Suspense>
     </>
