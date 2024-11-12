@@ -13,6 +13,7 @@ export default {
             boxShadow: {
                 'RoadMapTitle': '0 11px 4px 0 rgba(0, 0, 0, 0.45)',
                 'RoadMapContent': '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+                'ProductPillars': 'inset 0px 0px 11px 7px rgba(0,0,0,1)',
             },
             keyframes: {
                 squish: {

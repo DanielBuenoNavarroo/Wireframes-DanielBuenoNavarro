@@ -10,7 +10,7 @@ const RoadMapItem = ({ title, content }: RoadMapItemProps) => {
         {/* Circle */}
         <div
           className={
-            "size-10 rounded-full bg-gradient-to-b from-orange-600 via-orange-600 via-40% to-blue-500 p-1.5 relative"
+            "size-10 min-h-10 min-w-10 rounded-full bg-gradient-to-b from-orange-600 via-orange-600 via-40% to-blue-500 p-1.5 relative"
           }
         >
           <div className={"size-full rounded-full bg-neutral-800"} />

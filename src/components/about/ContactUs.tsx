@@ -9,7 +9,7 @@ const ContactItem = ({
   title: string;
   content: string;
 }) => (
-  <div className="flex flex-col items-center gap-2 w-36 lg:w-60">
+  <div className="flex flex-col items-center gap-2 w-36 md:w-40 lg:w-56">
     <div className="bg-black p-3 rounded-lg mb-2 hover:shadow-sm hover:shadow-orange-500">
       <Icon className="text-white size-6" />
     </div>

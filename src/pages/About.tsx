@@ -1,4 +1,4 @@
-import { ContactUs } from "@/components/about";
+import { ContactUs, ProductPillars } from "@/components/about";
 import { RoadMap, SeparateBar } from "@/components/examples";
 
 const About = () => {
@@ -38,6 +38,10 @@ const About = () => {
   ];
   return (
     <>
+      <h2 className="text-3xl md:text-5xl font-semibold text-gray-200 text-center">
+        Product Pillars
+      </h2>
+      <ProductPillars />
       <div className={"w-60 sm:w-80 md:w-[25rem] lg:w-[35rem] py-20"}>
         <SeparateBar />
       </div>
