@@ -11,8 +11,8 @@ const DefaultHeader = () => {
     };
 
     return (
-        <header className="w-full bg-transparent overflow-y-hidden border-b border-white/10 z-50">
-            <nav className="flex items-center justify-center md:justify-between px-8 py-2 bg-transparent">
+        <header className="w-full border-b border-white/10 z-50 fixed bg-neutral-950">
+            <nav className="flex items-center justify-center md:justify-between px-8 py-2">
                 <div className="px-4 relative w-full md:w-auto flex items-center justify-center">
                     <div
                         className={"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-white via-white to-orange-600 blur-lg w-32 h-4 -z-10"}
