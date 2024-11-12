@@ -38,7 +38,7 @@ const Examples = () => {
                 <div
                     onMouseEnter={() => handleActive("btn3")}
                     className={`max-w-40 sm:w-full border-2 rounded-lg p-2 sm:p-4 text-sm sm:text-base text-gray-200 text-center cursor-pointer ${btn3IsActive ? 'border-violet-700/80 shadow-2xl shadow-violet-700/90' : 'border-white/20'}`}>
-                    Chart
+                    Layouts
                 </div>
             </div>
             {btn1IsActive && (
@@ -60,7 +60,7 @@ const Examples = () => {
                         <Box className="w-full h-28 bg-blue-500 flex items-center justify-center">
                             Section1
                         </Box>
-                        <Box className="w-full h-28 bg-red-500 flex items-center justify-center">
+                        <Box className="w-full h-28 bg-red-500 flex items-center justify-center" >
                             Section2
                         </Box>
                         <Box className="w-full h-28 bg-green-500 flex items-center justify-center">
