@@ -14,10 +14,10 @@ const CarouselPage = () => {
   };
   return (
     <>
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white pl-4">
         Carousel
       </h1>
-      <p>A sleek and minimal carousel implementation.</p>
+      <p className="pl-4">A sleek and minimal carousel implementation.</p>
       <div className="w-full flex flex-col items-center gap-20 md:pt-10">
         <div className="w-80 sm:w-[25rem] md:w-[30rem] lg:w-[35rem] xl:w-[40rem] 2xl:w-[45rem]">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-50">

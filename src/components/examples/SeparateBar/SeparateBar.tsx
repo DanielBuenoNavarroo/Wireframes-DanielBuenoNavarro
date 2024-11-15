@@ -87,7 +87,7 @@ const separateBarStyles = cva(
     }
 );
 
-type SeparateBarProps = ComponentProps<"div"> & VariantProps<typeof separateBarStyles>
+export type SeparateBarProps = ComponentProps<"div"> & VariantProps<typeof separateBarStyles>
 
 const SeparateBar = forwardRef<HTMLDivElement, SeparateBarProps>(
     ({color1, color2, color3, ...props}, ref) => {
