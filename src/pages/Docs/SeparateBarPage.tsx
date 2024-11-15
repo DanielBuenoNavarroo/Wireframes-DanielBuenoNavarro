@@ -2,12 +2,36 @@ import { RoadMap2, SeparateBar, Table } from "@/components/examples";
 import { cnCode, SeparateBarTSX } from "@/lib/data";
 import { useState } from "react";
 
+type color =
+  | "yellow"
+  | "orange"
+  | "blue"
+  | "slate"
+  | "gray"
+  | "zinc"
+  | "neutral"
+  | "stone"
+  | "red"
+  | "amber"
+  | "lime"
+  | "green"
+  | "emerald"
+  | "teal"
+  | "cyan"
+  | "sky"
+  | "indigo"
+  | "violet"
+  | "purple"
+  | "fuchsia"
+  | "pink"
+  | "rose";
+
 const SeparateBarPage = () => {
-  const [colors, setColors] = useState(["yellow", "orange", "blue"]);
+  const [colors, setColors] = useState<color[]>(["yellow", "orange", "blue"]);
 
   const handleColorChange = (index: number, value: string) => {
     const updatedColors = [...colors];
-    updatedColors[index] = value;
+    updatedColors[index] = value as color;
     setColors(updatedColors);
   };
 
